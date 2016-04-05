@@ -66,7 +66,7 @@ public class Assignment2 {
                     continue;
                 if (isBitten[i] == 1 && dice == 6) //If bitten player gets a 6, it continues
                     isBitten[i] = 0;
-                else //If bitten player gets something other than a 6
+                else if (isBitten[i] == 1)//If bitten player gets something other than a 6
                     continue; 
                 System.out.println("Player " + (i+1) + " throws " + dice + "");
                 if (isWinner(players[i]+dice)) //If any player reaches 100 the game ends
